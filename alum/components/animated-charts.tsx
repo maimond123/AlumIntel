@@ -1,8 +1,8 @@
-"'use client'"
+'use client'
 
-import { useEffect, useRef } from "'react'"
-import { Chart } from "'chart.js/auto'"
-import { motion } from "'framer-motion'"
+import { useEffect, useRef } from 'react'
+import { Chart } from 'chart.js/auto'
+import { motion } from 'framer-motion'
 
 export default function AnimatedCharts() {
   const chartRef = useRef<HTMLCanvasElement>(null)
@@ -12,22 +12,22 @@ export default function AnimatedCharts() {
     if (!chartRef.current || !barChartRef.current) return
 
     // Pie Chart
-    const pieCtx = chartRef.current.getContext("'2d'")
-    if (!pieCtx) return
+    const pieCtx = chartRef.current.getContext('2d') as CanvasRenderingContext2D;
+    if (!pieCtx) return;
 
     const pieChart = new Chart(pieCtx, {
-      type: "'pie'",
+      type: 'pie',
       data: {
-        labels: ["'Alumni Engaged'", "'Potential Growth'"],
+        labels: ['Alumni Engaged', 'Potential Growth'],
         datasets: [{
           data: [75, 25],
           backgroundColor: [
-            "'rgba(64, 224, 208, 0.8)'",
-            "'rgba(20, 20, 0.1)'"
+            'rgba(64, 224, 208, 0.8)',
+            'rgba(20, 20, 0.1)'
           ],
           borderColor: [
-            "'rgba(64, 224, 208, 1)'",
-            "'rgba(20, 20, 0.2)'"
+            'rgba(64, 224, 208, 1)',
+            'rgba(20, 20, 0.2)'
           ],
           borderWidth: 1
         }]
@@ -35,7 +35,7 @@ export default function AnimatedCharts() {
       options: {
         animation: {
           duration: 2000,
-          easing: "'easeInOutQuart'"
+          easing: 'easeInOutQuart'
         },
         plugins: {
           legend: {
@@ -46,42 +46,42 @@ export default function AnimatedCharts() {
     })
 
     // Bar Chart
-    const barCtx = barChartRef.current.getContext("'2d'")
-    if (!barCtx) return
+    const barCtx = barChartRef.current.getContext('2d') as CanvasRenderingContext2D;
+    if (!barCtx) return;
 
     const barChart = new Chart(barCtx, {
-      type: "'bar'",
+      type: 'bar',
       data: {
-        labels: ["'2020'", "'2021'", "'2022'", "'2023'"],
+        labels: ['2020', '2021', '2022', '2023'],
         datasets: [{
-          label: "'Alumni Engagement'",
+          label: 'Alumni Engagement',
           data: [30, 45, 60, 85],
-          backgroundColor: "'rgba(64, 224, 208, 0.8)'",
-          borderColor: "'rgba(64, 224, 208, 1)'",
+          backgroundColor: 'rgba(64, 224, 208, 0.8)',
+          borderColor: 'rgba(64, 224, 208, 1)',
           borderWidth: 1
         }]
       },
       options: {
         animation: {
           duration: 2000,
-          easing: "'easeInOutQuart'"
+          easing: 'easeInOutQuart'
         },
         scales: {
           y: {
             beginAtZero: true,
             grid: {
-              color: "'rgba(255, 255, 0.1)'"
+              color: 'rgba(255, 255, 0.1)'
             },
             ticks: {
-              color: "'rgba(255, 255, 0.7)'"
+              color: 'rgba(255, 255, 0.7)'
             }
           },
           x: {
             grid: {
-              color: "'rgba(255, 255, 0.1)'"
+              color: 'rgba(255, 255, 0.1)'
             },
             ticks: {
-              color: "'rgba(255, 255, 0.7)'"
+              color: 'rgba(255, 255, 0.7)'
             }
           }
         },

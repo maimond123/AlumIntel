@@ -1,5 +1,5 @@
-import Image from "'next/image'"
-import Link from "'next/link'"
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -7,10 +7,10 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <Image src="/icons8-atom-24.png" alt="AlumIntel Logo" width={32} height={32} className="mr-2" />
-            <span className="text-xl font-bold">AlumIntel</span>
+            <span className="text-xl font-bold mr-4">AlumIntel</span>
+            <Image src="/assets/icons8-atom-24.png" alt="AlumIntel Logo" width={32} height={32} />
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-2">
             <Link href="/privacy-policy" className="hover:text-golden-yellow transition-colors">
               Privacy Policy
             </Link>

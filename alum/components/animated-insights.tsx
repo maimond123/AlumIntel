@@ -1,8 +1,8 @@
-"'use client'"
+'use client'
 
-import { useEffect, useState } from "'react'"
-import { motion, AnimatePresence } from "'framer-motion'"
-import { TrendingUp, Users, MapPin, Briefcase, GraduationCap, Award } from "'lucide-react'"
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { TrendingUp, Users, MapPin, Briefcase, GraduationCap, Award } from 'lucide-react'
 
 const insights = [
   {
